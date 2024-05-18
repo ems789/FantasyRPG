@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace API_Game_Server.Models;
 
-[Table("UserInfo")]
+[Table("user_info")]
 public class UserInfo
 {
     [Key]

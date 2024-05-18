@@ -9,7 +9,7 @@ public enum ProviderType
     Google = 2,
 }
 
-[Table("Account")]
+[Table("account")]
 public class Account
 {
     public int AccountId { get; set; }
