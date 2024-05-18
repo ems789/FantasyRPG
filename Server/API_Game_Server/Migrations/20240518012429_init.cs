@@ -18,7 +18,7 @@ namespace API_Game_Server.Migrations
                 name: "Account",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    AccountId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     LoginProviderUserId = table.Column<string>(type: "varchar(255)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
@@ -26,7 +26,7 @@ namespace API_Game_Server.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Account", x => x.Id);
+                    table.PrimaryKey("PK_Account", x => x.AccountId);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 

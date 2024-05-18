@@ -40,7 +40,7 @@ public class AccountService
             await _context.SaveChangesAsync();
         }
 
-        string jwtToken = _token.CreateJwtAccessToken(accountDb.Id);
+        string jwtToken = _token.CreateJwtAccessToken(accountDb.AccountId);
 
         return jwtToken;
     }

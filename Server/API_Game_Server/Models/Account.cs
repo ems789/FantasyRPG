@@ -12,7 +12,7 @@ public enum ProviderType
 [Table("Account")]
 public class Account
 {
-    public int Id { get; set; }
+    public int AccountId { get; set; }
 
     [Required]
     public string LoginProviderUserId { get; set; }

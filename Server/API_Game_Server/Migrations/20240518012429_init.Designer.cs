@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API_Game_Server.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240515204414_init")]
+    [Migration("20240518012429_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -24,13 +24,13 @@ namespace API_Game_Server.Migrations
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
 
-            modelBuilder.Entity("API_Game_Server.DataContext.AccountDb", b =>
+            modelBuilder.Entity("API_Game_Server.DataContext.Account", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("AccountId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("AccountId"));
 
                     b.Property<int>("LoginProviderType")
                         .HasColumnType("int");
@@ -39,7 +39,7 @@ namespace API_Game_Server.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(255)");
 
-                    b.HasKey("Id");
+                    b.HasKey("AccountId");
 
                     b.HasIndex("LoginProviderUserId", "LoginProviderType")
                         .IsUnique();
